@@ -1,6 +1,8 @@
 import './App.css';
 import Navbar from './components/Navbar';
+
 import Topics from './components/Topics';
+import MobileNav from './components/MobileNav';
 import Featured from './components/Featured';
 import CardList from './components/CardList';
 import About from './components/About';
@@ -9,12 +11,18 @@ import Sources from './components/Sources';
 import BlogPost from './components/BlogPost';
 import AnotherBlogPost from './components/AnotherBlogPost';
 import NewFeature from './components/NewFeature';
+import {useWindowSize} from './utils/useWindowSize'
 
 function App() {
+  const windowSize = useWindowSize();
+  const isSmallScreen = windowSize.width <= 768;
   return (
     <>
-      <Navbar />
-      <Topics />
+      {isSmallScreen ? (
+        <MobileNav />
+      ) : (
+        <Navbar />
+      )}
       <div className="p-2">
         <Featured />
       </div>
