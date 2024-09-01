@@ -35,6 +35,7 @@ function App() {
     e.preventDefault();
     localStorage.setItem('blogPost', JSON.stringify(formData));
     setShowForm(false);
+    window.location.reload();
   };
 
   return (
