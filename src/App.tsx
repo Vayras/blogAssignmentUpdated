@@ -12,12 +12,22 @@ import BlogPost from './components/BlogPost';
 import AnotherBlogPost from './components/AnotherBlogPost';
 import NewFeature from './components/NewFeature';
 import {useWindowSize} from './utils/useWindowSize'
+import { useState } from 'react';
 
 function App() {
   const windowSize = useWindowSize();
   const isSmallScreen = windowSize.width <= 768;
+  const [ showForm, setShowFrom ] = useState(false)
   return (
     <>
+    <button onClick={() =>setShowFrom(!showForm)}>showForm</button>
+    {showForm && <div className="fixed top-0 left-0 w-full h-full bg-white z-50 flex justify-center items-center">
+      <form action="">
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <button onClick={() =>setShowFrom(!showForm)} type="submit">Submit</button>
+      </form>
+      </div>}
       {isSmallScreen ? (
         <MobileNav />
       ) : (
