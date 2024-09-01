@@ -26,7 +26,7 @@ const cardData = [
 
 const CardList: React.FC = () => {
   return (
-    <div className="flex flex-col  md:flex-row md:space-x-4 sm:space-y-4 container mx-auto">
+    <div className="flex flex-col  md:flex-row md:space-x-4 md:space-y-0 sm:space-y-4 container mx-auto">
       {cardData.map((data, index) => (
         <Card key={index} {...data} />
       ))}

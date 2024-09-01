@@ -1,6 +1,6 @@
 function Topics() {
   return (
-    <div className="container flex justify-between item-center mx-auto">
+    <div className="container flex justify-between item-center mx-auto invisible md:visible">
       <p>World</p>
       <p>U.S.</p>
       <p>Technology</p>
