@@ -20,7 +20,7 @@ function App() {
   const [ showForm, setShowFrom ] = useState(false)
   return (
     <>
-    <button onClick={() =>setShowFrom(!showForm)}>showForm</button>
+    <button className='fixed bottom-10 right-10 bg-red-600 p-5 text-white rounded-md ' onClick={() =>setShowFrom(!showForm)}>Submit A Blog</button>
     {showForm && <div className="fixed top-0 left-0 w-full h-full bg-white z-50 flex justify-center items-center">
       <form action="">
         <input type="text" placeholder="Name" />
