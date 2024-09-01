@@ -24,14 +24,14 @@ function App() {
     content: ''
   });
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: { target: { name: any; value: any; }; }) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     localStorage.setItem('blogPost', JSON.stringify(formData));
     setShowForm(false);
