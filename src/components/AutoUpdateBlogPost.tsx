@@ -13,9 +13,9 @@ function AutoUpdateBlogPost() {
   return (
     <div className="pt-18">
       {blogPost ? (
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-4">{blogPost.title}</h2>
-          <p className="text-gray-700 mb-2">by {blogPost.author}</p>
+        <div className="bg-white rounded-lg shadow-lg">
+          <h2 className="text-5xl ">{blogPost.title}</h2>
+          <p className="text-gray-700 mb-5">by {blogPost.author}</p>
           <div className="text-gray-900 whitespace-pre-line">{blogPost.content}</div>
         </div>
       ) : (
